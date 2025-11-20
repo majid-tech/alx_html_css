@@ -3,12 +3,35 @@ body, main {
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
+    background: #05031a;
+    color: #ffe;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #0c0924;
+    display: flex;
+    justify-content: center;
+}
+
+header > ul li {
+    padding: 4px;
+    list-style: none;
+    display: inline;
+}
+
+li a{
+    text-decoration: none;
+    color: #ffe;
 }
 
 main {
     flex-direction: row;
     flex: auto;
+    padding: 13px;
 }
 
 article, aside {
@@ -17,9 +40,23 @@ article, aside {
 
 article {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #59585e;
 }
 
 aside {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+table{
+    width: 100%;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}

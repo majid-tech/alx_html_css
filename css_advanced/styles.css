@@ -1,0 +1,140 @@
+:root {
+    --primary-font-color: #fff;
+    --primary-font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--primary-font-family);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    padding: 35px 40px;
+    z-index: 20;
+    position: absolute;
+}
+
+nav {
+    width: 1480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .logo{
+    color: var(--primary-font-color);
+    font-family: var(--primary-font-family);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo::after{
+    font-weight: bold;
+    content: "SmileSchool";
+}
+
+nav img {
+    filter: brightness(0) invert(1);
+    height: 35px; /* matches screenshot */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--primary-font-color);
+    font-family: var(--primary-font-family);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero {
+    color: var(--primary-font-color);
+    position: relative;
+    background-image: url(images/Object.png), radial-gradient(circle, blue, navy);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 1020px;
+}
+
+.hero-title {
+    text-align: center;
+}
+
+.hero-title h1, .hero-title span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: var(--primary-font-color);
+}
+
+.hero-title h1 {
+    font-size: 120px;
+}
+
+.hero-title  button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #C271FF;
+    border-radius: 22px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-font-color);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title span {
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.hero .pros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.pros h2 span {
+    color: #C271FF;
+}
+
+.pros .pro {
+    display: flex;
+    gap: 120px;
+}
+
+.pro div {
+    width: 150px;
+    text-align: center;
+}
+
+.pro div p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+/* End of hero section.. */
+
+/*  */

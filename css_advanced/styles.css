@@ -1,8 +1,14 @@
+/* ===========================
+   VARIABLES
+=========================== */
 :root {
     --primary-font-color: #fff;
     --primary-font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* ===========================
+   GLOBAL STYLES
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +18,12 @@
 }
 
 /* ===========================
-   HEADER
+   HEADER & NAVIGATION
 =========================== */
 header {
     padding: 35px 40px;
-    z-index: 20;
     position: absolute;
+    z-index: 20;
 }
 
 nav {
@@ -27,22 +33,21 @@ nav {
     align-items: center;
 }
 
-nav .logo{
-    color: var(--primary-font-color);
-    font-family: var(--primary-font-family);
+nav .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--primary-font-color);
 }
 
-nav .logo::after{
-    font-weight: bold;
+nav .logo::after {
     content: "SmileSchool";
+    font-weight: bold;
 }
 
 nav img {
+    height: 35px;
     filter: brightness(0) invert(1);
-    height: 35px; /* matches screenshot */
 }
 
 nav ul {
@@ -53,32 +58,35 @@ nav ul {
 
 nav ul li a {
     color: var(--primary-font-color);
-    font-family: var(--primary-font-family);
-    text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
+    text-decoration: none;
 }
 
+/* ===========================
+   HERO SECTION
+=========================== */
 .hero {
-    color: var(--primary-font-color);
     position: relative;
-    background-image: url(images/Object.png), radial-gradient(circle, blue, navy);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 1020px;
+    color: var(--primary-font-color);
+    background-image: url(images/Object.png), radial-gradient(circle, blue, navy);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
     text-align: center;
 }
 
-.hero-title h1, .hero-title span {
-    font-family: 'Source Sans Pro', sans-serif;
+.hero-title h1,
+.hero-title span {
+    font-family: var(--primary-font-family);
     font-weight: bold;
     color: var(--primary-font-color);
 }
@@ -87,24 +95,24 @@ nav ul li a {
     font-size: 120px;
 }
 
-.hero-title  button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #C271FF;
-    border-radius: 22px;
-    border: none;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--primary-font-color);
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
-}
-
 .hero-title span {
     font-size: 16px;
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 20px;
+}
+
+.hero-title button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-font-color);
+    background-color: #C271FF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .hero .pros {
@@ -135,9 +143,9 @@ nav ul li a {
     font-weight: 100;
 }
 
-/* End of hero section.. */
-
-/* Styling of testimonials */
+/* ===========================
+   TESTIMONIALS
+=========================== */
 .testimonials {
     height: 392px;
     background-color: #C271FF;
@@ -152,3 +160,266 @@ nav ul li a {
     width: 700px;
     line-height: 1.5;
 }
+
+/* ===========================
+   TUTORIALS
+=========================== */
+.tutorials {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.tutorials h2 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tutorials h2 span {
+    color: #c271ff;
+    font-weight: 600;
+}
+
+.tutorials-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 60px;
+    flex-wrap: wrap;
+}
+
+.tutorial-card {
+    width: 230px;
+}
+
+.thumb {
+    position: relative;
+    width: 100%;
+}
+
+.thumb img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.thumb::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    background: url("images/play.png") no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.tutorial-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tutorial-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.author h4 {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #c271ff;
+    font-weight: 600;
+}
+
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.stars i {
+    font-size: 12px;
+    color: #c271ff;
+}
+
+.stars i:last-child {
+    color: #d8d7d7;
+}
+
+.rating-row .duration {
+    font-size: 12px;
+    font-weight: 600;
+    color: #c271ff;
+}
+
+/* ===========================
+   MEMBERSHIP
+=========================== */
+.membership {
+    background: #0a1526;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.membership h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.membership h2 span {
+    color: #c271ff;
+    font-weight: 600;
+}
+
+.membership-features {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 40px;
+}
+
+.feature img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.feature p {
+    width: 180px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #b7c0d3;
+}
+
+.register-btn {
+    padding: 12px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #c271ff, #8f5fff);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faq {
+    padding: 70px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.faq h2 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.faq-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #071629;
+    text-align: center;
+    height: 249px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer section div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+footer section div i {
+    font-size: 30px;
+    color: var(--primary-font-color);
+}
+
+footer section div .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--primary-font-color);
+}
+
+footer section div .logo img {
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
+
+footer section div .logo::after {
+    content: "SmileSchool";
+    font-weight: bold;
+}
+
+footer p {
+    color: #424242;
+}
+

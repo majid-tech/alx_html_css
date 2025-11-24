@@ -137,4 +137,18 @@ nav ul li a {
 
 /* End of hero section.. */
 
-/*  */
+/* Styling of testimonials */
+.testimonials {
+    height: 392px;
+    background-color: #C271FF;
+    color: var(--primary-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.testimonial-div {
+    width: 700px;
+    line-height: 1.5;
+}

@@ -1,107 +1,161 @@
 :root {
-     /* Fonts */
+  /* Fonts */
   --font-primary: 'Source Sans Pro', Arial, sans-serif;
   --font-secondary: 'Spin-Cycle-OT', Arial, sans-serif;
 
   /* Brand / Primary */
-  --color-primary-dark: #0A1A2F;      /* Deep navy background */
-  --color-primary: #FF5A5F;           /* Pink-coral buttons & icons */
+  --color-primary-dark: #0A1A2F;
+  --color-primary: #FF5A5F;
 
   /* Neutrals */
-  --color-white: #FFFFFF;             /* Main white text/background */
-  --color-light: #F5F5F5;             /* Light section backgrounds */
-  --color-gray: #6C6C6C;              /* Body text gray */
-  --color-gray-light: #D8D8D8;        /* Input borders, faint lines */
+  --color-white: #FFFFFF;
+  --color-light: #F5F5F5;
+  --color-gray: #6C6C6C;
+  --color-gray-light: #D8D8D8;
 
-  /* Accent / Icon variations */
-  --color-accent-red: #FF6B6B;        /* Red-ish icon accents */
-  --color-accent-soft: #FFC4C4;       /* Soft highlight in badges */
+  /* Accents */
+  --color-accent-red: #FF6B6B;
+  --color-accent-soft: #FFC4C4;
 
-  /* Shadows / Overlays */
-  --color-overlay-dark: rgba(0, 0, 0, 0.45); /* Header image overlay */
+  /* Overlay */
+  --color-overlay-dark: rgba(0, 0, 0, 0.45);
 }
-
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+}
+
+/* HERO SECTION */
+
 .hero {
-    height: 100vh;
-    background-image: url(images/headphones_hero_1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    gap: 140px;
-    position: relative;
+  position: relative;
+  height: 100vh;
+  background: url(images/headphones_hero_1.jpg) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 100px;
 }
 
 .overlay {
-    background-color: var(--color-overlay-dark);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay-dark);
+  z-index: 0;
 }
 
+/* NAVIGATION */
+
 .nav-bar {
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-    width: 200px;
+  width: 160px;
 }
 
 .link-list {
-    display: flex;
-    gap: 18px;
-    font-family: var(--font-primary);
+  display: flex;
+  gap: 35px;
 }
 
 .link-list li {
-    list-style: none;
+  list-style: none;
 }
 
-.link-list li a{
-    color: var(--color-light);
-    text-decoration: none;
-    font-size: large;
+.link-list a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
 }
 
-.link-list li a:hover{
-    color: var(--color-primary);
+.link-list a:hover {
+  color: var(--color-primary);
 }
+
+
+/* HERO TEXT */
 
 .hero-text {
-    max-width: 750px;
-    align-self: center;
-    font-family: var(--font-secondary);
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-white);
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-text .subtitle {
+  margin-bottom: 30px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.description {
+  max-width: 700px;
+  margin: 40px auto 0;
+  line-height: 1.7;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 20px 30px;
+  }
+
+  .link-list li {
+    display: none;
+    gap: 20px;
+  }
+
+  .material-symbols-outlined{
     color: var(--color-white);
-    text-align: center;
-    line-height: 30px;
+    
 }
 
-.hero-text div, .hero-text button {
-    margin-bottom: 30px;
-}
+  .hero-text h1 {
+    font-size: 24px;
+  }
 
-.hero-text button {
-    padding: 10px 18px;
-    border-radius: 30px;
-    border: none;
-    background-color: var(--color-accent-red);
-    color: var(--color-light);
-    font-weight: bold;
-    box-shadow: 0px 3px 3px 1px var(--color-overlay-dark);
-}
-
-.hero-text button:hover{
-    background-color: var(--color-primary);
-    cursor: pointer;
+  .description {
+    font-size: 14px;
+  }
 }

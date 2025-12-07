@@ -134,6 +134,30 @@ body {
   opacity: 0.9;
 }
 
+/* What we do section */
+.whatwedo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 160px;
+    text-align: center;
+    gap: 40px;
+}
+
+.whatwedo-items {
+    display: flex;
+
+}
+
+.item p {
+    color: var(--color-gray);
+}
+
+.holberton_school-icon-ic_sound, .holberton_school-icon-ic_video, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing{
+    font-size: 120px;
+    color: var(--color-primary);
+}
+
 /* RESPONSIVE LAYOUT */
 
 @media (max-width: 768px) {

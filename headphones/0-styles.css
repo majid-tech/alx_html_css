@@ -146,10 +146,6 @@ body {
     gap: 20px;
   }
 
-  .material-symbols-outlined{
-    color: var(--color-white);
-    
-}
 
   .hero-text h1 {
     font-size: 24px;

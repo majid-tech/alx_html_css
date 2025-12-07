@@ -135,7 +135,7 @@ body {
 }
 
 /* What we do section */
-.whatwedo {
+.whatwedo, .results, .contact-us {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,18 +144,46 @@ body {
     gap: 40px;
 }
 
-.whatwedo-items {
+.whatwedo-items, .results-items .item {
     display: flex;
+    gap: 40px;
 }
-
 
 .item p {
     color: var(--color-gray);
 }
 
+.results .item img {
+    width: 160px;
+}
+
 .holberton_school-icon-ic_sound, .holberton_school-icon-ic_video, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing{
     font-size: 120px;
     color: var(--color-primary);
+}
+
+.results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-light);
+}
+
+/* contact section */
+
+form{
+    width: 350px;
+}
+
+form input{
+    padding: 8px;
+    display: block;
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.5px solid #6C6C6C;
+    margin-bottom: 15px;
 }
 
 /* RESPONSIVE LAYOUT Small screen*/
@@ -182,7 +210,6 @@ body {
     gap: 20px;
   }
 
-
   .hero-text h1 {
     font-size: 24px;
   }
@@ -190,6 +217,7 @@ body {
   .description {
     font-size: 14px;
   }
+
   .whatwedo{
     padding: 60px 100px;
   }

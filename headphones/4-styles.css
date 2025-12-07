@@ -135,7 +135,7 @@ body {
 }
 
 /* What we do section */
-.whatwedo {
+.whatwedo, .results, .contact-us {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,13 +144,18 @@ body {
     gap: 40px;
 }
 
-.whatwedo-items {
+.whatwedo-items, .results-items .item {
     display: flex;
+    justify-content: center;
+    gap: 40px;
 }
-
 
 .item p {
     color: var(--color-gray);
+}
+
+.results .item img {
+    width: 160px;
 }
 
 .holberton_school-icon-ic_sound, .holberton_school-icon-ic_video, .holberton_school-icon-ic_music, .holberton_school-icon-ic_hearing{
@@ -158,13 +163,90 @@ body {
     color: var(--color-primary);
 }
 
+.results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-light);
+}
+
+/* contact section */
+
+form{
+    width: 500px;
+}
+
+form input{
+    padding: 8px;
+    display: block;
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.5px solid #6C6C6C;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    padding: 40px 80px;
+    background-color: var(--color-primary-dark);
+    color: var(--color-light);
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-handle{
+    display: flex;
+    gap: 8px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+}
+
+footer ul li span:hover{
+    color: var(--color-accent-red);
+}
+
+.holberton_school-icon-ic_facebook, .holberton_school-icon-ic_twitter, .holberton_school-icon-ic_instagram{
+    font-size: 30px;
+    color: var(--color-light);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 8px;
+    color: var(--color-light);
+}
+
 /* RESPONSIVE LAYOUT Small screen*/
 
-@media (max-width: 1028px){
-  .whatwedo-items {
+@media (max-width: 1024px){
+  .whatwedo-items, .results-items .item {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .whatwedo, .results, .contact-us{
+    padding: 60px 100px;
+  }
+  
+  .results-items .item img{
+    width: 130px;
+  }
+
+  form {
+    width: 100%;
   }
 
   .item {
@@ -182,7 +264,6 @@ body {
     gap: 20px;
   }
 
-
   .hero-text h1 {
     font-size: 24px;
   }
@@ -190,7 +271,8 @@ body {
   .description {
     font-size: 14px;
   }
-  .whatwedo{
+
+  .whatwedo, .results, .contact-us{
     padding: 60px 100px;
   }
 
@@ -199,5 +281,20 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+form {
+    width: 100%;
+  }
+
+.cta-btn {
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
 }
 }

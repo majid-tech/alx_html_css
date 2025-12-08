@@ -87,9 +87,10 @@ body {
   color: var(--color-primary);
 }
 
-.link-list .material-symbols-outlined{
-    display: none;
+#close {
+  display: none;
 }
+
 
 /* HERO TEXT */
 
@@ -284,6 +285,10 @@ footer p {
   /* When toggled open */
   .link-list.open {
     display: flex;
+  }
+
+  .link-list.close {
+    display: none;
   }
 
   #menu {
